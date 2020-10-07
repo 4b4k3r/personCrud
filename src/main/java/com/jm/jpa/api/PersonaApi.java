@@ -7,8 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
+@Valid
 @RestController
 public class PersonaApi
 {
@@ -17,7 +19,7 @@ public class PersonaApi
 
     @PutMapping(path = "/person/new")
     @ResponseStatus(code = HttpStatus.OK)
-    public Persona newPerson(@Validated  @RequestBody( required =  true ) Persona persona)
+    public Persona newPerson(@Valid @RequestBody( required =  true ) Persona persona)
     {
         return personaController.save(persona);
     }
