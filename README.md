@@ -8,6 +8,8 @@ administrada bajo JPA
 
 ###Endpoints
 
+>**NOTA**: Para acceder a la vista de la api con swagger acceder al servicio a traves de la url `protocol://host:port/context` (`http://localhost:8080/jpaExample`)
+
 #####Insertar una nueva persona en base de datos
 
 URL: `http://ip:port/jpaExample/person/new`
